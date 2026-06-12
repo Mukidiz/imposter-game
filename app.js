@@ -75,16 +75,18 @@
   function revealCard() {
     var isImpostor = (state.current - 1) === state.impostor;
     var icon = $('card-icon').querySelector('i');
+    var hint = $('card-hint');
     $('card-chip').textContent = 'שחקן ' + state.current;
     if (isImpostor) {
       $('card-label').textContent = 'התפקיד שלך';
       $('card-word').textContent = IMPOSTOR_WORD;
-      $('card-hint').textContent = 'השתלבו ונסו לנחש את המילה';
+      hint.textContent = 'השתלבו ונסו לנחש את המילה';
+      hint.style.display = '';
       icon.className = 'ti ti-spy';
     } else {
       $('card-label').textContent = 'המילה שלך';
       $('card-word').textContent = WORDS[state.round];
-      $('card-hint').textContent = 'תנו רמז במילה אחת';
+      hint.style.display = 'none';
       icon.className = 'ti ti-bulb';
     }
     show('card');
