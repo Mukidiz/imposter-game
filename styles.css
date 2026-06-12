@@ -90,6 +90,8 @@ body {
 .btn:active { transform: scale(0.97); }
 .btn i { font-size: 21px; }
 .foot { font-size: 13px; color: var(--sub); }
+.credit { font-size: 12px; font-weight: 500; color: var(--sub); line-height: 1.45; max-width: 320px; text-align: center; opacity: 0.92; }
+.title.brand { font-size: clamp(28px, 8.5vw, 38px); letter-spacing: -0.5px; }
 
 .chip {
   background: var(--chip-bg); color: var(--chip-ink);
